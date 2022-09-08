@@ -1,0 +1,11 @@
+---
+- name: Download packages on localhost
+  hosts: localhost
+  become: yes
+
+  tasks:
+  - name: Install jq onto local ubuntu
+    apt:
+       name: jq
+       state: latest
+       install_recommends: yes
